@@ -1,6 +1,7 @@
 # Insurance_Domain
 
 #Basics Of Insurance
+
 WHAT IS INSURANCE
 1.	Insurance is a contract represented by a policy in which policy holders receive financial protection or reimbursement against losses from an insurance company.
 2.	The company groups high-risk clients together so insurers can offer more affordable payment options. 
