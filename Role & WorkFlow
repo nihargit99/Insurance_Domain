@@ -36,8 +36,11 @@ Application Submission → Underwriting Approval → Policy Issuance → Renewal
 
 
 ## **2-Minute Interview Answer**
-“In my last project, I worked on the Policy Administration System called ConceptOne, which is part of an end-to-end insurance workflow. 
+In my last project, I worked on the Policy Administration System called ConceptOne, which is part of an end-to-end insurance workflow. 
 The overall process starts with user authentication via SSO, then moves to underwriting where risks are assessed and rated using APIs. 
-Once approved, the policy details flow into ConceptOne for lifecycle management—covering new business, renewals, endorsements, 
-and cancellations. My role focused on form testing, ensuring correct generation of policy documents, validating rating and underwriting rules, 
-and performing end-to-end policy lifecycle testing. I also verified integration between ConceptOne, ETM, and Data Lake for accurate data flow.”
+Once approved, the policy details flow into ConceptOne for lifecycle management—covering new business, renewals, endorsements, and cancellations.
+
+My responsibilities included policy lifecycle testing, product testing, and form testing to ensure accurate generation of policy documents. 
+I also verified class codes, program and sub-program mappings, tested broker and affiliate mappings, and validated subjectivities and conditions as per 
+business rules. Additionally, I performed UI testing for the ConceptOne application and database testing for backend validation to ensure 
+data integrity across integrated systems like ETM and Data Lake.
