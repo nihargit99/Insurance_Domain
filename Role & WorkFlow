@@ -1,5 +1,5 @@
 
-## **Overall Business Workflow (Simplified)**
+# **Overall Business Workflow (Simplified)**
 
 1. User Authentication (SSO)
   - Users log in securely using Single Sign-On.
@@ -20,22 +20,20 @@
 7. Data Lake (EDW)
   - Stores historical and transactional data for reporting and analytics.
 
-## **Your Role in the Workflow**
+# **Your Role in the Workflow**
 
 Form Testing
 Verified that all policy forms (applications, endorsements, renewals) were generated correctly based on state, product, and coverage rules.
 
-
 Product Testing
 Ensured rating, underwriting rules, and policy issuance worked as expected for different insurance products.
-
 
 Policy Lifecycle Testing
 Tested end-to-end flow:
 Application Submission → Underwriting Approval → Policy Issuance → Renewal → Endors
 
 
-## **2-Minute Interview Answer**
+# **2-Minute Interview Answer**
 In my last project, I worked on the Policy Administration System called ConceptOne, which is part of an end-to-end insurance workflow. 
 The overall process starts with user authentication via SSO, then moves to underwriting where risks are assessed and rated using APIs. 
 Once approved, the policy details flow into ConceptOne for lifecycle management—covering new business, renewals, endorsements, and cancellations.
