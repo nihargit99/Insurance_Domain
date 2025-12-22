@@ -1,0 +1,314 @@
+Course Objective
+The objective of this course is to understand the concepts of Duck Creek Billing and its underlying core functionalities. At the end of this module, you would gain a broader functional understanding of each of the below concepts:
+•	Introduction to Duck Creek Billing
+•	Bill plans & Scheduling
+•	Invoicing & Payment Processing
+•	Payment Allocation
+•	Follow Up Process
+•	Suspense & Disbursement
+•	Commission
+•	Chart of Accounts Mapping
+1) Introduction to Duck Creek Billing
+The billing component of Duck Creek is used by insurers to create bills, collect money, and manage all billing-related activities for policies.
+Think of it like: The central cashier and accounting system for an insurance company.
+2) Bill Plans & Scheduling
+The rules that decide how much to bill and when (e.g., monthly, quarterly, annually).
+Think of it like: Choosing a mobile plan (prepaid/postpaid) and the billing cycle.
+3) Invoicing & Payment Processing
+Invoicing: Creating and sending the bill that shows amount due, due date, and breakdown of charges.
+Payment Processing: Accepting money via different channels (online, bank transfer, card, cash, etc.), validating it, and recording it against the right invoice/policy.
+4) Payment Allocation
+Deciding where a received payment should be applied, e.g., to the latest bill, oldest bill, fees, or specific policy.
+Think of it like: Splitting a deposit across multiple outstanding bills.
+5) Follow Up Process
+Activities are done when payments are late or missing.
+Think of it like: Automated reminders + human collections steps.
+6) Suspense & Disbursement
+Suspense (Holding Account): Temporary place to park money when you can’t immediately match it to the right invoice/policy (e.g., missing details).
+Disbursement: Moving money out of suspense to the correct destination once identified—or refunding to the customer/agent.
+7) Commission
+What it is: Money paid to agents/brokers for selling policies—often a percentage of premium.
+How billing relates: Commissions can be calculated, accrued, and paid based on collected premiums, with rules for claw backs/adjustments if a policy cancels or changes.
+8) Chart of Accounts Mapping
+What it is: Connecting billing transactions (premium, fees, taxes, commissions, refunds) to the correct accounting ledger codes.
+Think of it like: Labeling every transaction so the finance system knows exactly where it goes.
+
+Module 1: Introduction to Duck Creek Billing, Bill Plan and Scheduling
+Introduction to Duck Creek Billing
+1) Duck Creek Billing Overview
+•	What it is: A billing system for insurance companies that handles all billing-related tasks.
+•	Why it matters: It connects Policy, Billing, and Claims into one platform for smooth operations.
+________________________________________
+2) Integrated Suite
+•	Duck Creek combines Policy, Billing, and Claims so insurers don’t need separate systems.
+•	Think of it like: A single app that manages everything—policy details, bills, and claims.
+________________________________________
+3) Single Solution Across LOB & Bill Types
+•	LOB = Line of Business (e.g., Auto, Home, Commercial).
+•	Duck Creek Billing works for all types of insurance and billing methods.
+•	Benefit: No need for multiple billing systems for different products.
+________________________________________
+4) Holistic View
+•	Shows all transactions and payment history in one place.
+•	Why useful: Easy to track customer payments and resolve issues quickly.
+________________________________________
+5) Account Driven
+•	All billing activities happen under a billing account.
+•	Example: If a customer has multiple policies, they can be linked to one billing account for easier management.
+________________________________________
+6) Policy Linked to Billing Account
+•	Every insurance policy is tied to a billing account.
+•	Think of it like: Your Netflix subscription linked to your payment account.
+________________________________________
+7) Direct Bill & Agency Bill
+•	Direct Bill: Customer pays insurer directly.
+•	Agency Bill: Customer pays agent, and agent pays insurer.
+•	Why important: Supports different business models.
+________________________________________
+8) Timer and Event Driven
+•	Timer: Automated tasks run at scheduled times (e.g., generate bills every month).
+•	Event: Actions happen when something triggers them (e.g., payment received → update account).
+•	Think of it like: 
+o	Timer = Alarm clock for scheduled tasks.
+o	Event = Doorbell that triggers an action when pressed.
+
+Bill Plan & Scheduling
+1) Bill Plan
+•	What it is: A plan that decides how and when the customer will pay the premium.
+•	Why important : It gives flexibility to customers and helps insurers manage cash flow.
+________________________________________
+2) Two Key Parameters
+•	Collection Method: How the payment will be collected. 
+o	Paper: Customer gets an invoice and pays manually.
+o	Recurring Card: Payment is auto charged to a credit card.
+o	Auto Pay Bank: Payment is auto deducted from a bank account.
+•	Payment Plan: How many installments and how often payments happen. 
+o	Example: Monthly, quarterly, or annual payments.
+o	Includes down payment and installment distribution.
+________________________________________
+3) Scheduling
+•	What it is: The timeline for generating bills and collecting payments.
+•	Think of it like: A calendar that decides when invoices are sent and payments are due.
+•	Example: 
+o	If 12 installments → schedule monthly billing dates.
+ 
+
+Use Case: Selection of Bill Plan
+Scenario Summary
+•	Customer Rob buys a Homeowners policy.
+•	Total premium = $64.05.
+•	Rob chooses 4 Quarterly Installments (instead of paying full amount at once).
+•	Billing type = Direct Bill (Rob pays insurer directly).
+•	Due date for each installment = 1st of the month.
+________________________________________
+What Happens Next?
+•	System creates 4 invoices based on the chosen plan.
+•	Each invoice has: 
+o	Amount (split from total premium)
+o	Print Date (when invoice is generated)
+o	Due Date (when payment is expected)
+o	Tax (added to first invoice)
+o	Status (currently Un-Paid)
+________________________________________
+Key Concepts Explained
+•	Direct Bill: Customer pays insurer directly (not through an agent).
+•	Installment Plan: Breaks premium into smaller payments (quarterly in this case).
+•	Invoice Schedule: A table showing when each bill is generated and due.
+ 
+Account Creation on Policy Issuance
+What Happens When a Policy is Issued?
+1.	Bill Account Creation
+•	As soon as the policy is officially issued, the system creates a billing account
+•	This account will track all billing-related activities for that policy.
+2.	Receivable Amount Posted
+•	The premium amount that the customer needs to pay is recorded in this billing account.
+•	Think of it like: Adding the amount due to the account so the system knows what to collect.
+3.	Policy Linked to Bill Account
+•	The issued policy is connected to the billing account.
+•	Why important: This link ensures that payments are correctly applied to the right policy.
+Key Points to Remember
+•	Billing Account = Central place for all payment tracking for a policy.
+•	Receivable Amount = Premium due recorded in the account.
+•	Linking Policy to Billing Account = Ensures accurate billing and reporting.
+Billing Dashboard:
+ 
+
+ 
+Installment Schedule
+What is Installment Schedule?
+•	It’s the timeline for when each payment is due for the current policy term.
+•	Think of it like: A payment calendar for your insurance premium.
+________________________________________
+Key Parameters
+1.	Payment Plan
+•	Decide how many installments and the amount per installment.
+•	Example: 4 quarterly payments of $50 each.
+2.	Target Due Date
+•	The exact date when each installment must be paid.
+•	Example: 1st of every quarter.
+Additional Configurations
+1.	Bill Prod Offset Days
+•	Grace period between invoice generation and payment due date.
+•	Example: Invoice generated on 1st → Due date on 10th (10-day offset).
+2.	Blackout Calendar
+•	No billing on weekends or holidays.
+•	If due date falls on holiday, it moves to the next working day.
+•	Think of it like: Adjusting deadlines to business days.
+________________________________________
+🔑 Why This Matters
+•	Ensure payments are scheduled correctly.
+•	Avoids confusion when holidays or weekends occur.
+•	Help maintain smooth billing operations.
+Module 2: Invoicing and Payment Processing
+Invoice Processing
+It’s the process of creating a bill for the customer based on the payment schedule.
+1.	Depends on Scheduling: Invoice generation follows the installment schedule (monthly, quarterly, etc.).
+2.	Bill Prod Offset Date: A buffer period between invoice creation and payment due date. Example: Invoice generated on 1st → Due date on 10th (10-day offset).
+3.	Calculation of Amounts
+o	System calculations: 
+	Receivables: Amount customer owes.
+	Charges: Any additional fees.
+	Past Due: Previous unpaid amounts.
+4.	Invoice Details
+	Agency info (if applicable).
+	Customer info.
+	Total due amount (Charges + Receivables).
+5.	Final Output
+o	Invoice shows: Amount due. And Due date.
+Why This Matters
+1.	Ensures accurate billing.
+2.	Help customers know exactly what they owe and when.
+3.	Supports smooth payment collection.
+
+Payment Processing & Allocation
+What is Payment Processing?
+•	It’s the step where the insurer receives money from the customer for the amount due.
+•	Payments can be applied to: 
+o	Account: Covers all policies under that account.
+o	Policy: Applied to a specific policy.
+o	Invoice: Applied to a specific bill.
+Payment Methods Supported: Customers can pay using: 
+o	Cash
+o	Check
+o	Wire Transfer
+o	eCheck
+o	Credit/Debit Card
+What is Payment Allocation?
+•	After receiving payment, the system decides where to apply it: 
+o	To the correct invoice.
+o	To the correct policy.
+o	Or across multiple policies in a batch.
+Batch Payment
+•	If a customer pays for multiple policies at once, the system processes all payments together in a single batch.
+•	Think of it like: One big transaction split into smaller allocations.
+Why This Matters
+•	Ensure payments are correctly applied.
+•	Supports multiple payment options for customer convenience.
+•	Handles complex scenarios like bulk payments efficiently.
+
+Module 3: Follow Up Processing
+Follow Up Processing
+It’s the process that starts when something goes wrong with payment. Is it needed: To manage overdue payments and prevent policy lapses.
+When Does It Start?
+•	Payment due date missed: Customer didn’t pay on time.
+•	Payment threshold not met: Paid less than required.
+•	Payment reversed: A previous payment was canceled or refunded.
+Follow-Up Actions
+1.	Pending Cancellation (PCN): Policy is marked as “at risk” for cancellation.
+2.	Rescind PCN: If payment is received, the pending cancellation is removed.
+3.	Cancellation: If payment is not received within the grace period, policy is canceled.
+Follow Up activities on a policy
+These are actions taken when a customer misses payment or policy is at risk of cancellation.
+•	Reminder Notice: A message sent before the due date to remind the customer about payment.
+•	Pending Cancellation (PCN): If payment is missed, policy status changes to “Pending Cancellation”. A cancellation date is set based on rules (state laws or company policy).
+•	Late Charges: Extra fee added when payment is overdue.
+•	Rescind PCN: If payment is made before the cancellation date, PCN is removed and policy becomes active again.
+•	Cancellation: If payment is not received by the cancellation date, the policy is canceled.
+•	Reinstatement: If payment comes after cancellation, policy can be reinstated (reactivated).
+•	Collection: If money is still owed after cancellation, it goes to a collection account for recovery.
+Module 4: Suspense and Disbursement
+Suspense
+•	Suspense is a temporary holding account for money that cannot be immediately applied to a specific invoice or policy.
+•	Why does this happen? 
+o	Customers paid more than required (overpayment).
+o	Policy changes (endorsement) or cancellation creates credit.
+o	Missing details to allocate payment correctly.
+What Happens to Suspense Amount?
+1.	Transferred: Move money to another account or policy.
+2.	Hold for Premium: Keep the amount for future premium payments.
+3.	Hold: Keep it in suspense until clarification or instructions are received.
+4.	Disbursed: Refund the amount to the customer or agent.
+Why This Matters
+•	Prevents mis posting of funds.
+•	Ensures accurate financial records.
+•	Help manage customer credits and refunds properly.
+Disbursement
+What is Disbursement?
+•	Disbursement means sending money back to the source (refund process).
+•	Happens when: 
+o	Policy is canceled.
+o	Overpayment occurs.
+o	Credit adjustments are made.
+Types of Disbursement
+•	Manual
+o	A user manually triggers the refund.
+o	Example: Customer service initiates refund after policy cancellation.
+•	Automatic
+o	System refunds automatically based on rules.
+o	Example: Overpayment detected → system processes refund without manual action.
+Steps in Disbursement Process
+1.	Initiation: Refund request starts (manual or automatic).
+2.	Authorization: Approval required before money is sent.
+3.	Processing: System creates an outbound payment file.
+4.	Update: Billing system marks refund as completed.
+5.	Re-suspension: If external system requests, refunded amount can be put back into suspense.
+
+Module 5: Commission and Chart of Account Mapping
+Commission
+Commission is the fee paid to an agent or agency for selling an insurance policy. It’s usually a percentage of the premium or a flat amount.
+How Duck Creek Handles Commission
+1.	Commission Account: Each agency gets its own account to track commissions.
+2.	Commission Plan: Defines how commission is calculated (percentage or flat rate). Example: 10% of premium or $50 per policy.
+3.	Commission Scheme: Rules for commission calculation (POP, POW, POEs – these are plan types).
+4.	Commission Statements: Generated monthly. And paid via check or EFT (Electronic Funds Transfer).
+Commission Allocation
+•	Two ways: 
+o	Percentage of Premium: Example: 10% of $500 premium = $50 commission.
+o	Flat Rate: Fixed amount per policy.
+Process Flow
+1.	Create commission account for agency.
+2.	Add commission plan details.
+3.	Issue policy under that agency.
+4.	System picks the plan during issuance.
+5.	Validate in commission maintenance.
+What is a Commission Plan?
+•	A commission plan decides how much commission an agency earns for selling policies.
+•	It can be inherited from parent agencies to child agencies (hierarchical setup).
+What Factors Affect Commission Plans?
+•	State: Different states may have different rules.
+•	Writing Company: The insurer issuing the policy.
+•	LOB (Line of Business): Auto, Home, Commercial, etc.
+•	Product: Specific insurance product.
+•	User-defined keys: Custom parameters set by the company.
+Graduated or Tiered Commission
+•	Commission changes based on premium size.
+•	Example: 
+o	Premium $0–$500 → 10% commission
+o	Premium $501–$1000 → 12% commission
+Commission Disbursement
+•	Once the monthly statement is generated, commission is paid to the agency.
+•	Follows the same process as refunds (disbursement).
+Commission Claw Back
+•	If a policy is canceled midterm, the system takes back the commission already paid. Because the agency shouldn’t keep commission for a canceled policy.
+Chart of Accounts Mapping
+•	It’s the process of linking billing transactions to the correct accounting codes for financial reporting.
+•	Think of it like: Labeling every transaction so the finance system knows where to put it in the company’s books.
+Why is it Needed?
+•	Insurance companies need accurate financial statements.
+•	Helps in audits and compliance.
+•	Enables integration with external accounting systems (like General Ledger).
+How Does It Work?
+1.	Daily Billing Transactions: All billing activities (invoices, payments, refunds) are recorded.
+2.	General Journal Table: These transactions are summarized and stored for accounting purposes.
+3.	Chart of Accounts Assignment Table: Each transaction is assigned to the correct account type (e.g., Premium, Tax, Commission).
+4.	Chart of Accounts Table: Final mapping for posting into external accounting systems.
