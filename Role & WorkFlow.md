@@ -38,7 +38,7 @@ In my last project, I worked on the Policy Administration System called ConceptO
 The overall process starts with user authentication via SSO, then moves to underwriting where risks are assessed and rated using APIs. 
 Once approved, the policy details flow into ConceptOne for lifecycle management—covering new business, renewals, endorsements, and cancellations.
 
-My responsibilities included policy lifecycle testing, product testing, and form testing to ensure accurate generation of policy documents. 
+### My responsibilities ### included policy lifecycle testing, product testing, and form testing to ensure accurate generation of policy documents. 
 I also verified class codes, program and sub-program mappings, tested broker and affiliate mappings, and validated subjectivities and conditions as per 
 business rules. Additionally, I performed UI testing for the ConceptOne application and database testing for backend validation to ensure 
 data integrity across integrated systems like ETM and Data Lake.
