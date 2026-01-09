@@ -33,7 +33,7 @@ How billing relates: Commissions can be calculated, accrued, and paid based on c
 What it is: Connecting billing transactions (premium, fees, taxes, commissions, refunds) to the correct accounting ledger codes.
 Think of it like: Labeling every transaction so the finance system knows exactly where it goes.
 
-Module 1: Introduction to Duck Creek Billing, Bill Plan and Scheduling
+## Module 1: Introduction to Duck Creek Billing, Bill Plan and Scheduling
 Introduction to Duck Creek Billing
 1) Duck Creek Billing Overview
 •	What it is: A billing system for insurance companies that handles all billing-related tasks.
@@ -206,7 +206,7 @@ Why This Matters
 •	Supports multiple payment options for customer convenience.
 •	Handles complex scenarios like bulk payments efficiently.
 
-Module 3: Follow Up Processing
+## Module 3: Follow Up Processing
 Follow Up Processing
 It’s the process that starts when something goes wrong with payment. Is it needed: To manage overdue payments and prevent policy lapses.
 When Does It Start?
@@ -226,7 +226,8 @@ These are actions taken when a customer misses payment or policy is at risk of c
 •	Cancellation: If payment is not received by the cancellation date, the policy is canceled.
 •	Reinstatement: If payment comes after cancellation, policy can be reinstated (reactivated).
 •	Collection: If money is still owed after cancellation, it goes to a collection account for recovery.
-Module 4: Suspense and Disbursement
+
+## Module 4: Suspense and Disbursement
 Suspense
 •	Suspense is a temporary holding account for money that cannot be immediately applied to a specific invoice or policy.
 •	Why does this happen? 
@@ -263,7 +264,7 @@ Steps in Disbursement Process
 4.	Update: Billing system marks refund as completed.
 5.	Re-suspension: If external system requests, refunded amount can be put back into suspense.
 
-Module 5: Commission and Chart of Account Mapping
+## Module 5: Commission and Chart of Account Mapping
 Commission
 Commission is the fee paid to an agent or agency for selling an insurance policy. It’s usually a percentage of the premium or a flat amount.
 How Duck Creek Handles Commission
