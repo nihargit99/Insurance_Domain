@@ -42,3 +42,15 @@ My responsibilities included policy lifecycle testing, product testing, and form
 I also verified class codes, program and sub-program mappings, tested broker and affiliate mappings, and validated subjectivities and conditions as per 
 business rules. Additionally, I performed UI testing for the ConceptOne application and database testing for backend validation to ensure 
 data integrity across integrated systems like ETM and Data Lake.
+
+
+RSUM helps insurance companies by:
+Designing and managing specialized insurance programs for industries with unique risks.
+Underwriting policies (deciding coverage and pricing) for these niche markets.
+Acting as an expert middle layer between insurance carriers and brokers.
+
+
+How you can say it in an interview:
+“RSUM is a specialty underwriting agency. They create and manage insurance programs for niche industries like energy, healthcare, and construction. 
+Instead of selling directly, they work as MGUs with authority from carriers to underwrite policies. Their role is to provide expertise in complex risk areas 
+and offer tailored insurance solutions.”
