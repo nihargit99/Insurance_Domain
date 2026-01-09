@@ -166,16 +166,16 @@ It’s the process of creating a bill for the customer based on the payment sche
 1.	Depends on Scheduling: Invoice generation follows the installment schedule (monthly, quarterly, etc.).
 2.	Bill Prod Offset Date: A buffer period between invoice creation and payment due date. Example: Invoice generated on 1st → Due date on 10th (10-day offset).
 3.	Calculation of Amounts
-o	System calculations: 
-	Receivables: Amount customer owes.
-	Charges: Any additional fees.
-	Past Due: Previous unpaid amounts.
+ o	System calculations: 
+  	Receivables: Amount customer owes.
+  	Charges: Any additional fees.
+  	Past Due: Previous unpaid amounts.
 4.	Invoice Details
-	Agency info (if applicable).
-	Customer info.
-	Total due amount (Charges + Receivables).
+ 	Agency info (if applicable).
+ 	Customer info.
+ 	Total due amount (Charges + Receivables).
 5.	Final Output
-o	Invoice shows: Amount due. And Due date.
+ o	Invoice shows: Amount due. And Due date.
 Why This Matters
 1.	Ensures accurate billing.
 2.	Help customers know exactly what they owe and when.
@@ -185,15 +185,15 @@ Payment Processing & Allocation
 What is Payment Processing?
 •	It’s the step where the insurer receives money from the customer for the amount due.
 •	Payments can be applied to: 
-o	Account: Covers all policies under that account.
-o	Policy: Applied to a specific policy.
-o	Invoice: Applied to a specific bill.
+ o	Account: Covers all policies under that account.
+ o	Policy: Applied to a specific policy.
+ o	Invoice: Applied to a specific bill.
 Payment Methods Supported: Customers can pay using: 
-o	Cash
-o	Check
-o	Wire Transfer
-o	eCheck
-o	Credit/Debit Card
+ o	Cash
+ o	Check
+ o	Wire Transfer
+ o	eCheck
+ o	Credit/Debit Card
 What is Payment Allocation?
 •	After receiving payment, the system decides where to apply it: 
 o	To the correct invoice.
@@ -232,9 +232,9 @@ These are actions taken when a customer misses payment or policy is at risk of c
 Suspense
 •	Suspense is a temporary holding account for money that cannot be immediately applied to a specific invoice or policy.
 •	Why does this happen? 
-o	Customers paid more than required (overpayment).
-o	Policy changes (endorsement) or cancellation creates credit.
-o	Missing details to allocate payment correctly.
+ o	Customers paid more than required (overpayment).
+ o	Policy changes (endorsement) or cancellation creates credit.
+ o	Missing details to allocate payment correctly.
 What Happens to Suspense Amount?
 1.	Transferred: Move money to another account or policy.
 2.	Hold for Premium: Keep the amount for future premium payments.
@@ -248,16 +248,16 @@ Disbursement
 What is Disbursement?
 •	Disbursement means sending money back to the source (refund process).
 •	Happens when: 
-o	Policy is canceled.
-o	Overpayment occurs.
-o	Credit adjustments are made.
+ o	Policy is canceled.
+ o	Overpayment occurs.
+ o	Credit adjustments are made.
 Types of Disbursement
 •	Manual
-o	A user manually triggers the refund.
-o	Example: Customer service initiates refund after policy cancellation.
+ o	A user manually triggers the refund.
+ o	Example: Customer service initiates refund after policy cancellation.
 •	Automatic
-o	System refunds automatically based on rules.
-o	Example: Overpayment detected → system processes refund without manual action.
+ o	System refunds automatically based on rules.
+ o	Example: Overpayment detected → system processes refund without manual action.
 Steps in Disbursement Process
 1.	Initiation: Refund request starts (manual or automatic).
 2.	Authorization: Approval required before money is sent.
@@ -266,49 +266,59 @@ Steps in Disbursement Process
 5.	Re-suspension: If external system requests, refunded amount can be put back into suspense.
 
 ## Module 5: Commission and Chart of Account Mapping
-Commission
+Commission:
 Commission is the fee paid to an agent or agency for selling an insurance policy. It’s usually a percentage of the premium or a flat amount.
 How Duck Creek Handles Commission
 1.	Commission Account: Each agency gets its own account to track commissions.
 2.	Commission Plan: Defines how commission is calculated (percentage or flat rate). Example: 10% of premium or $50 per policy.
 3.	Commission Scheme: Rules for commission calculation (POP, POW, POEs – these are plan types).
 4.	Commission Statements: Generated monthly. And paid via check or EFT (Electronic Funds Transfer).
-Commission Allocation
+
+Commission Allocation:
 •	Two ways: 
-o	Percentage of Premium: Example: 10% of $500 premium = $50 commission.
-o	Flat Rate: Fixed amount per policy.
-Process Flow
+ o	Percentage of Premium: Example: 10% of $500 premium = $50 commission.
+ o	Flat Rate: Fixed amount per policy.
+
+Process Flow:
 1.	Create commission account for agency.
 2.	Add commission plan details.
 3.	Issue policy under that agency.
 4.	System picks the plan during issuance.
 5.	Validate in commission maintenance.
+
 What is a Commission Plan?
 •	A commission plan decides how much commission an agency earns for selling policies.
 •	It can be inherited from parent agencies to child agencies (hierarchical setup).
+
 What Factors Affect Commission Plans?
 •	State: Different states may have different rules.
 •	Writing Company: The insurer issuing the policy.
 •	LOB (Line of Business): Auto, Home, Commercial, etc.
 •	Product: Specific insurance product.
 •	User-defined keys: Custom parameters set by the company.
-Graduated or Tiered Commission
+
+Graduated or Tiered Commission:
 •	Commission changes based on premium size.
 •	Example: 
-o	Premium $0–$500 → 10% commission
-o	Premium $501–$1000 → 12% commission
-Commission Disbursement
+ o	Premium $0–$500 → 10% commission
+ o	Premium $501–$1000 → 12% commission
+
+Commission Disbursement:
 •	Once the monthly statement is generated, commission is paid to the agency.
 •	Follows the same process as refunds (disbursement).
-Commission Claw Back
+
+Commission Claw Back:
 •	If a policy is canceled midterm, the system takes back the commission already paid. Because the agency shouldn’t keep commission for a canceled policy.
-Chart of Accounts Mapping
+
+Chart of Accounts Mapping:
 •	It’s the process of linking billing transactions to the correct accounting codes for financial reporting.
 •	Think of it like: Labeling every transaction so the finance system knows where to put it in the company’s books.
+
 Why is it Needed?
 •	Insurance companies need accurate financial statements.
 •	Helps in audits and compliance.
 •	Enables integration with external accounting systems (like General Ledger).
+
 How Does It Work?
 1.	Daily Billing Transactions: All billing activities (invoices, payments, refunds) are recorded.
 2.	General Journal Table: These transactions are summarized and stored for accounting purposes.
