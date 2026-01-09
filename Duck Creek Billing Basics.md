@@ -155,11 +155,12 @@ Additional Configurations
 •	If due date falls on holiday, it moves to the next working day.
 •	Think of it like: Adjusting deadlines to business days.
 ________________________________________
-🔑 Why This Matters
+Why This Matters
 •	Ensure payments are scheduled correctly.
 •	Avoids confusion when holidays or weekends occur.
 •	Help maintain smooth billing operations.
-Module 2: Invoicing and Payment Processing
+
+## Module 2: Invoicing and Payment Processing
 Invoice Processing
 It’s the process of creating a bill for the customer based on the payment schedule.
 1.	Depends on Scheduling: Invoice generation follows the installment schedule (monthly, quarterly, etc.).
